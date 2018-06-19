@@ -3,6 +3,7 @@ import { Route, Switch, NavLink } from 'react-router-dom'
 
 import './App.css'
 import Github from './Github'
+import MapContainer from './MapContainer'
 
 class App extends Component {
   render() {
@@ -16,9 +17,13 @@ class App extends Component {
           <li>
             <NavLink to="/github">GitHub</NavLink>
           </li>
+          <li>
+            <NavLink to="/google">Google Maps</NavLink>
+          </li>
         </ul>
         <Switch>
           <Route path="/github" component={Github} />
+          <Route path="/google" component={MapContainer} />
           <Route
             render={() => (
               <p>To get started, click one of the links above.</p>
