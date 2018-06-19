@@ -5,7 +5,11 @@ export class MapContainer extends Component {
   render() {
     return (
       <Map google={this.props.google}
-        style={{ width: '100%', height: '100%', position: 'relative' }}
+        style={{ width: '70%', height: '60%', position: 'relative', marginLeft: 'auto', marginRight: 'auto' }}
+        initialCenter={{
+          lat: 39.8107775,
+          lng: -86.2027602
+        }}
         className={'map'}
         zoom={14}>
         <Marker
